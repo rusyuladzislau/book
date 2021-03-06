@@ -1,0 +1,56 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <div style="display: flex; justify-content: space-between;">
+        <div style="padding-top: 10px;">
+          <ion-label>New book</ion-label>
+        </div>
+        <div>
+          <ion-button (click)="addBook()">Save book</ion-button>
+        </div>
+      </div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="container">
+    <form [formGroup]="form">
+      <ion-item>
+        <ion-label>ISBN</ion-label>
+        <ion-input
+          formControlName="inputISBN"
+          type='text'
+        ></ion-input> 
+      </ion-item>
+      <ion-item>
+        <ion-label>Book</ion-label>
+        <ion-input
+        formControlName="inputBook"
+        type='text'
+        ></ion-input> 
+      </ion-item>
+      <ion-item>
+        <ion-label>Author</ion-label>
+        <ion-input
+          formControlName="inputAuthor"
+          type='text'
+        ></ion-input> 
+      </ion-item>
+      <ion-item>
+        <ion-label>Publisher</ion-label>
+        <ion-input
+          formControlName="inputPublisher"
+          type='text'
+        ></ion-input> 
+      </ion-item>
+      <ion-item>
+        <ion-label>Year</ion-label>
+        <ion-input
+          formControlName="inputYear"
+          type='number'
+        ></ion-input> 
+      </ion-item>
+    </form>
+  </div>
+</ion-content>
